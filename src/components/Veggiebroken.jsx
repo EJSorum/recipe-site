@@ -8,7 +8,7 @@ function Veggies() {
       getIngredients();
    },[]);
    const getIngredients = () => async () => {
-      const api = await fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=e21cf22c36214e388773a43a541abfde&ingredients=${ingredients}&number=9`);
+      const api = await fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.REACT_APP_API_KEY}&ingredients=${ingredients}&number=9`);
       const data = await api.json();
       console.log(data)
       setRecipes(data);

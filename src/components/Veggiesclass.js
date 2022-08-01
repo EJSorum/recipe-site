@@ -10,7 +10,7 @@ constructor(props) {
   }
 // I would need componentDidMount etc
    const getIngredients = () => async () => {
-      const api = await fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=e21cf22c36214e388773a43a541abfde&ingredients=${this.state.ingredient}&number=9`);
+      const api = await fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.REACT_APP_API_KEY}&ingredients=${this.state.ingredient}&number=9`);
       const data = await api.json();
       console.log(data)
       this.state.recipes=(data);
