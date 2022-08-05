@@ -1,0 +1,58 @@
+.mainColumn {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 20px;
+}
+
+.buttonsGrid {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 10px;
+   width: 480px;
+   padding-bottom: 40px;
+   position: relative;
+   left: -75px;
+}
+
+.buttonsGrid > button {
+   width: 150px;
+   height: 150px;
+   border-radius: 5%;
+   background-color: rgba(100, 255, 50, 0.7);
+   border: none;
+   box-shadow: rgba(100, 100, 100, 0.5) 2px 2px 2px;
+   font-size: 1.5rem;
+}
+
+.buttonsGrid > button:hover {
+   background-color: rgba(100, 255, 50, 1);
+}
+
+.buttonsGrid > button:active {
+   box-shadow: inset rgba(100, 100, 100, 0.5) 2px 2px 2px;
+}
+
+.recipesGrid {
+   display: inline-grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 10px;
+   padding: 20px;
+}
+
+.title {
+   font-size: 1.5rem;
+   font-weight: 700;
+}
+
+.recipesGrid > div {
+   width: 400px;
+   background-color: rgba(100, 255, 50, 0.9);
+   box-shadow: rgba(100, 100, 100, 0.5) 2px 2px 2px;
+   padding: 20px;
+   border-radius: 10%;
+}
+
+
+
+

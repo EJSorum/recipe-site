@@ -1,33 +1,29 @@
 import { useEffect, useState } from "react";
+import style from '../style/Recipe.module.css'
 
 function Recipe(props) {
-   const [recipe, setRecipe] = useState(props.recipe)
+   const [recipe, setRecipe] = useState([])
    useEffect(() => {
       getRecipe();
    },[]);
    const getRecipe = async () => {
-      const api = await fetch(`https://api.spoonacular.com/recipes/${recipe.id}/ingredientWidget.json?apiKey=${process.env.REACT_APP_API_KEY}`);
+      const api = await fetch(`https://api.spoonacular.com/recipes/${props.recipe.id}/ingredientWidget.json?apiKey=${process.env.REACT_APP_API_KEY}`);
       const data = await api.json();
-      // I get an array of ingredients for each recipe
-      // I need a 
-      console.log(data.ingredients)
       setRecipe(data.ingredients);
    }
 
 
   return (
-      <ul>
+      <ul className={style.ingredients}>
       {recipe.map((ingredient) => {
          return(
-               <li>
+               <li className={style.bullet}>
                   <p>{ingredient.amount.us.value} {ingredient.amount.us.unit} {ingredient.name}</p>
-
                </li>
          )
       })}
       </ul>
   )
-   
 }
 
 export default Recipe
