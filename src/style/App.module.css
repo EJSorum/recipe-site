@@ -1,42 +1,46 @@
 .App {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   gap: 20px;
-   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
 }
 
 header {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   max-height: 250px;
-   width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 250px;
+  width: 100vw;
 }
 
 h1 {
-   font-size: 4rem;
-   font-weight: 900;
-   color: rgb(100, 255, 50);
-   text-shadow: black 2px 2px 2px;
+  font-size: 4rem;
+  font-weight: 900;
+  color: rgb(100, 255, 50);
+  text-shadow: black 2px 2px 2px;
 }
 
 .buttonDiv {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 .numButton {
-   color: rgba(100, 100, 100, 1.0);
-   box-shadow: black 2px 2px 2px;
-   width: 90px;
-   height: 60px;
+  color: rgba(100, 100, 100, 1);
+  box-shadow: black 2px 2px 2px;
+  width: 90px;
+  height: 60px;
 }
 
 .numButton:active {
-   color: rgba(100, 100, 100, 0.8);
-   box-shadow: inset black 2px 2x 2x;
+  color: rgba(100, 100, 100, 0.8);
+  box-shadow: inset black 2px 2x 2x;
+}
+
+.select {
+  font-size: 1.2rem;
 }

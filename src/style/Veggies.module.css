@@ -1,58 +1,74 @@
 .mainColumn {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 
 .buttonsGrid {
-   display: grid;
-   grid-template-columns: repeat(4, 1fr);
-   gap: 10px;
-   width: 480px;
-   padding-bottom: 40px;
-   position: relative;
-   left: -75px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 480px;
+  padding-bottom: 20px;
+  position: relative;
+  left: -75px;
 }
 
 .buttonsGrid > button {
-   width: 150px;
-   height: 150px;
-   border-radius: 5%;
-   background-color: rgba(100, 255, 50, 0.7);
-   border: none;
-   box-shadow: rgba(100, 100, 100, 0.5) 2px 2px 2px;
-   font-size: 1.5rem;
+  width: 150px;
+  height: 150px;
+  border-radius: 5%;
+  background-color: rgba(100, 255, 50, 0.7);
+  border: none;
+  box-shadow: rgba(100, 100, 100, 0.5) 2px 2px 2px;
+  font-size: 1.5rem;
 }
 
 .buttonsGrid > button:hover {
-   background-color: rgba(100, 255, 50, 1);
+  background-color: rgba(100, 255, 50, 1);
 }
 
 .buttonsGrid > button:active {
-   box-shadow: inset rgba(100, 100, 100, 0.5) 2px 2px 2px;
+  box-shadow: inset rgba(100, 100, 100, 0.5) 2px 2px 2px;
 }
 
 .recipesGrid {
-   display: inline-grid;
-   grid-template-columns: repeat(2, 1fr);
-   gap: 10px;
-   padding: 20px;
+  display: inline-grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 20px;
 }
 
 .title {
-   font-size: 1.5rem;
-   font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .recipesGrid > div {
-   width: 400px;
-   background-color: rgba(100, 255, 50, 0.9);
-   box-shadow: rgba(100, 100, 100, 0.5) 2px 2px 2px;
-   padding: 20px;
-   border-radius: 10%;
+  width: 400px;
+  background-color: rgba(100, 255, 50, 0.9);
+  box-shadow: rgba(100, 100, 100, 0.5) 2px 2px 2px;
+  padding: 20px;
 }
 
+form {
+  font-size: 1.2rem;
+  border: solid black 2px;
+  border-radius: 3%;
+  padding: 20px;
+}
 
+#custom {
+  width: 100px;
+  height: 20px;
+  padding-left: 20px;
+}
 
+.select {
+  font-size: 1.2rem;
+}
 
+.section {
+  font-weight: 800;
+}
