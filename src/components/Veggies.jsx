@@ -4,14 +4,6 @@ import Recipe from './Recipe';
 import Instructions from './Instructions';
 import style from '../style/Veggies.module.css';
 
-/*
-TODO:
-- Consider refactoring so all three API fetch functions are in the same component.
-- Style search bar and "select number of recipes."
-- Wrap any long web addresses if they appear in the recipe text.
-- Style body or header with images.
-*/
-
 function Veggies(props) {
   // recipes is the data for each recipe fetched from the API
   const [recipes, setRecipes] = useState([]);
@@ -21,9 +13,12 @@ function Veggies(props) {
   /*
    The Veggies component contains most of the app functionality.  The useEffect hook
    controls the getIngredients function, which fetches data from the spoonacular API.
-   By passing [ingredient] as the second parameter of useEffect, a new search with
+   This component finds the title and image of each recipe from spoonacular.
+   The documentation for this API function may be found here:
+   https://spoonacular.com/food-api/docs#Search-Recipes-by-Nutrients
+   By passing [ingredient] as the second parameter of useEffect, a new search will
    start when new ingredients are entered.
-   */
+  */
 
   const getRecipes = async () => {
     const api = await fetch(
@@ -36,8 +31,8 @@ function Veggies(props) {
     getRecipes();
   }, [ingredient]);
   /*
-   The handler below is commented out since the useEffect automatically fetches new recipes
-   when the ingredient changes.
+   The handler below is commented out since useEffect automatically fetches new recipes
+   when the contents of the search bar changes.
    I have kept it here in case another solution is preferred at some point.
    */
   // const handleSubmit = (e) => {e.preventDefault();getRecipes()}
